@@ -26,6 +26,7 @@ end
 group :production do
   gem 'unicorn'
   gem 'pg'
+  gem 'rails_12factor'
 end
 group :test do
   gem 'database_cleaner', '1.0.1'
