@@ -31,7 +31,12 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-    @item = Item.new(item_params)
+    @list = List.find(params[:list_id])
+
+     @item = Item.new(item_params)
+    #@item =  current_user.item.build(params[:item])
+    @item.list = @topic
+
 
     respond_to do |format|
       if @item.save
