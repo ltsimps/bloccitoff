@@ -11,15 +11,21 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+        @list = List.find(params[:list_id])
+        @item = Item.find(params[:id])
+
   end
 
   # GET /items/new
   def new
+    @list = List.find(params[:list_id])
     @item = Item.new
   end
 
   # GET /items/1/edit
   def edit
+            @list = List.find(params[:list_id])
+
   end
 
   # POST /items
@@ -70,7 +76,7 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:completed, :description)
+      params.require(:item).permit(:completed, :description, :list)
     end
 
     #def more_than_seven_days_old
