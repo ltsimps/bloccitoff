@@ -1,21 +1,20 @@
-<h1>Listing lists</h1>
 
-<table>
+<h1>Listing lists </h1>
+
+<table "table table-striped">
   <thead>
     <tr>
-      <th>Item</th>
       <th>User</th>
       <th>Name</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>dd</th>
+      <th>ddd</th>
+      <th><dd/th>
     </tr>
   </thead>
 
   <tbody>
     <% @lists.each do |list| %>
       <tr>
-        <td><%= list.item.description %></td>
         <td><%= list.user.name %></td>
         <td><%= list.name %></td>
         <td><%= link_to 'Show', list %></td>
@@ -29,3 +28,4 @@
 <br>
 
 <%= link_to 'New List', new_list_path %>
+ 

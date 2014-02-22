@@ -73,8 +73,9 @@ class ItemsController < ApplicationController
       params.require(:item).permit(:completed, :description)
     end
 
-    def more_than_seven_days_old
-
-    end
+    #def more_than_seven_days_old
+    #    current_time = Time.new
+    #    if @item.created_at 
+    # end
 
 end
