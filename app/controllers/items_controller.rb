@@ -35,7 +35,7 @@ class ItemsController < ApplicationController
 
      @item = Item.new(item_params)
     #@item =  current_user.item.build(params[:item])
-    @item = current_user.build_item(params[:item])
+    @item = current_user.items.build(item_params)
      #@item = current_user.items.build(params[:item])
     #@item.list = @topic
 
@@ -83,7 +83,7 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:completed, :description, :list)
+      params.require(:item).permit(:completed, :description, :list, :user, :item)
     end
 
     #def more_than_seven_days_old
