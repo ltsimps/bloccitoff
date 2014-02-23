@@ -38,7 +38,7 @@ class ItemsController < ApplicationController
     @item = current_user.items.build(item_params)
      #@item = current_user.items.build(params[:item])
     #@item.list = @topic
-
+    #binding.pry
 
     respond_to do |format|
       if @item.save
