@@ -35,7 +35,9 @@ class ItemsController < ApplicationController
 
      @item = Item.new(item_params)
     #@item =  current_user.item.build(params[:item])
-    @item.list = @topic
+    @item = current_user.build_item(params[:item])
+     #@item = current_user.items.build(params[:item])
+    #@item.list = @topic
 
 
     respond_to do |format|
