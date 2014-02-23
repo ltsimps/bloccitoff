@@ -12,13 +12,14 @@
   </thead>
 
   <tbody>
-    <% @items.each do |item| %>
+    <% @list.items.each do |item| %>
+      sss
       <tr>
         <td><%= item.completed %></td>
         <td><%= item.description %></td>
-        <td><%= link_to 'Show', list_item_path(item) %></td>
-        <td><%= link_to 'Edit', list_edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show'%></td>
+     
+
       </tr>
     <% end %>
   </tbody>
